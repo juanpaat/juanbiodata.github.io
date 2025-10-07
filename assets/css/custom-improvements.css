@@ -1,0 +1,652 @@
+/* 
+ * Custom Style Improvements for Juan Pablo Alzate Portfolio
+ * Enhanced modern design with professional styling
+ */
+
+/* Import modern Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+/* CSS Variables for consistent color palette */
+:root {
+    /* Primary color palette */
+    --primary-color: #2563eb;
+    --primary-hover: #1d4ed8;
+    --primary-light: #dbeafe;
+    --secondary-color: #64748b;
+    --accent-color: #06b6d4;
+    
+    /* Neutral colors */
+    --background-primary: #ffffff;
+    --background-secondary: #f8fafc;
+    --background-tertiary: #f1f5f9;
+    --text-primary: #1e293b;
+    --text-secondary: #64748b;
+    --text-muted: #94a3b8;
+    
+    /* Borders and shadows */
+    --border-color: #e2e8f0;
+    --border-light: #f1f5f9;
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    
+    /* Typography */
+    --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --line-height-relaxed: 1.6;
+    --line-height-loose: 1.8;
+    
+    /* Spacing */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 3rem;
+    --spacing-2xl: 4rem;
+    
+    /* Border radius */
+    --radius-sm: 0.25rem;
+    --radius-md: 0.5rem;
+    --radius-lg: 0.75rem;
+    --radius-xl: 1rem;
+}
+
+/* Global improvements */
+body {
+    font-family: var(--font-primary) !important;
+    background: var(--background-secondary) !important;
+    color: var(--text-primary) !important;
+    line-height: var(--line-height-relaxed) !important;
+    font-size: 16px !important;
+}
+
+/* Heading improvements */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-primary) !important;
+    color: var(--text-primary) !important;
+    font-weight: 600 !important;
+    letter-spacing: -0.025em !important;
+    line-height: 1.3 !important;
+    margin-bottom: var(--spacing-md) !important;
+}
+
+h1 { font-size: 2.5rem !important; font-weight: 700 !important; }
+h2 { font-size: 2rem !important; }
+h3 { font-size: 1.5rem !important; }
+h4 { font-size: 1.25rem !important; }
+
+/* Improved section headers */
+h2.major {
+    position: relative !important;
+    border-top: none !important;
+    font-size: 1.75rem !important;
+    text-align: center !important;
+    margin: var(--spacing-lg) 0 var(--spacing-md) 0 !important;
+    padding-top: 0 !important;
+    color: var(--text-primary) !important;
+    font-weight: 600 !important;
+}
+
+h2.major span {
+    background: transparent !important;
+    padding: 0 !important;
+    position: relative !important;
+    top: 0 !important;
+    display: inline-block !important;
+    border-bottom: 3px solid var(--primary-color) !important;
+    padding-bottom: var(--spacing-xs) !important;
+}
+
+/* Navigation improvements */
+#nav {
+    background: var(--background-primary) !important;
+    backdrop-filter: blur(10px) !important;
+    border-bottom: 1px solid var(--border-color) !important;
+    box-shadow: var(--shadow-sm) !important;
+    padding: var(--spacing-sm) 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    padding-left: var(--spacing-md) !important;
+    padding-right: var(--spacing-md) !important;
+}
+
+/* Navigation brand */
+.nav-brand {
+    display: flex !important;
+    align-items: center !important;
+    gap: var(--spacing-xs) !important;
+    font-weight: 600 !important;
+    color: var(--text-primary) !important;
+}
+
+.portfolio-icon {
+    transition: transform 0.3s ease !important;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1)) !important;
+}
+
+.portfolio-icon:hover {
+    transform: scale(1.1) !important;
+}
+
+.brand-text {
+    font-size: 1.1rem !important;
+    font-weight: 600 !important;
+    color: var(--text-primary) !important;
+}
+
+#nav ul {
+    display: flex !important;
+    gap: var(--spacing-xs) !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+#nav li {
+    margin: 0 !important;
+}
+
+#nav li a {
+    display: inline-block !important;
+    padding: var(--spacing-sm) var(--spacing-md) !important;
+    background: var(--background-tertiary) !important;
+    color: var(--text-secondary) !important;
+    text-decoration: none !important;
+    border-radius: var(--radius-lg) !important;
+    font-weight: 500 !important;
+    font-size: 0.95rem !important;
+    transition: all 0.2s ease !important;
+    border: 1px solid transparent !important;
+}
+
+#nav li a:hover {
+    background: var(--primary-color) !important;
+    color: white !important;
+    transform: translateY(-1px) !important;
+    box-shadow: var(--shadow-md) !important;
+}
+
+#nav li.current a {
+    background: var(--primary-color) !important;
+    color: white !important;
+    border-color: var(--primary-color) !important;
+    box-shadow: var(--shadow-md) !important;
+}
+
+/* Banner improvements */
+#banner {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%) !important;
+    color: white !important;
+    text-align: center !important;
+    padding: var(--spacing-xl) var(--spacing-md) var(--spacing-lg) var(--spacing-md) !important;
+    position: relative !important;
+    overflow: hidden !important;
+}
+
+#banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(255,255,255,0.1) 0%, transparent 50%, rgba(255,255,255,0.1) 100%);
+    pointer-events: none;
+}
+
+#banner .content {
+    position: relative !important;
+    z-index: 1 !important;
+    max-width: 600px !important;
+    margin: 0 auto !important;
+}
+
+#banner .content h2 {
+    color: white !important;
+    font-size: 3rem !important;
+    font-weight: 700 !important;
+    margin-bottom: var(--spacing-sm) !important;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3) !important;
+}
+
+#banner .content p {
+    color: rgba(255,255,255,0.9) !important;
+    font-size: 1.25rem !important;
+    font-weight: 400 !important;
+    margin-bottom: var(--spacing-lg) !important;
+}
+
+/* Main content improvements */
+#main {
+    background: var(--background-primary) !important;
+    border-radius: var(--radius-xl) var(--radius-xl) 0 0 !important;
+    margin-top: -2rem !important;
+    position: relative !important;
+    z-index: 2 !important;
+    box-shadow: var(--shadow-lg) !important;
+    padding-top: var(--spacing-lg) !important;
+}
+
+/* Box and card improvements */
+.box {
+    background: var(--background-primary) !important;
+    border-radius: var(--radius-lg) !important;
+    padding: var(--spacing-lg) !important;
+    margin-bottom: var(--spacing-lg) !important;
+    box-shadow: var(--shadow-sm) !important;
+    border: 1px solid var(--border-light) !important;
+    transition: all 0.3s ease !important;
+}
+
+.box:hover {
+    box-shadow: var(--shadow-md) !important;
+    transform: translateY(-2px) !important;
+}
+
+.box.highlight {
+    background: transparent !important;
+    border: none !important;
+    border-radius: 0 !important;
+    padding: var(--spacing-md) 0 !important;
+    box-shadow: none !important;
+    margin-bottom: var(--spacing-lg) !important;
+}
+
+.box.feature {
+    text-align: center !important;
+    padding: var(--spacing-md) !important;
+    height: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+}
+
+.box.feature h3 {
+    font-size: 1.125rem !important;
+    font-weight: 600 !important;
+    color: var(--text-primary) !important;
+    margin: var(--spacing-md) 0 var(--spacing-sm) 0 !important;
+    line-height: 1.4 !important;
+}
+
+.box.feature h3 a {
+    color: var(--text-primary) !important;
+    text-decoration: none !important;
+    transition: color 0.2s ease !important;
+}
+
+.box.feature h3 a:hover {
+    color: var(--primary-color) !important;
+}
+
+.box.feature p {
+    color: var(--text-secondary) !important;
+    font-size: 0.95rem !important;
+    line-height: var(--line-height-relaxed) !important;
+    margin-bottom: var(--spacing-md) !important;
+    flex-grow: 1 !important;
+}
+
+/* Image improvements */
+.image.featured img {
+    border-radius: var(--radius-md) !important;
+    transition: transform 0.3s ease !important;
+    width: 100% !important;
+    height: 160px !important;
+    object-fit: cover !important;
+    object-position: center !important;
+}
+
+.box.feature:hover .image.featured img {
+    transform: scale(1.02) !important;
+}
+
+/* Specific adjustments for landscape images */
+.image.featured {
+    overflow: hidden !important;
+    border-radius: var(--radius-md) !important;
+    margin-bottom: var(--spacing-md) !important;
+}
+
+/* Button improvements */
+.button {
+    display: inline-block !important;
+    background: var(--primary-color) !important;
+    color: white !important;
+    padding: var(--spacing-sm) var(--spacing-lg) !important;
+    border-radius: var(--radius-md) !important;
+    text-decoration: none !important;
+    font-weight: 500 !important;
+    font-size: 0.95rem !important;
+    transition: all 0.2s ease !important;
+    border: 2px solid var(--primary-color) !important;
+    text-transform: none !important;
+}
+
+.button:hover {
+    background: var(--primary-hover) !important;
+    border-color: var(--primary-hover) !important;
+    transform: translateY(-1px) !important;
+    box-shadow: var(--shadow-md) !important;
+    text-decoration: none !important;
+}
+
+.button.scrolly {
+    background: rgba(255,255,255,0.2) !important;
+    border: 2px solid rgba(255,255,255,0.3) !important;
+    color: white !important;
+    backdrop-filter: blur(10px) !important;
+}
+
+.button.scrolly:hover {
+    background: white !important;
+    color: var(--primary-color) !important;
+    border-color: white !important;
+}
+
+/* Contact icons improvements */
+.contact {
+    display: flex !important;
+    justify-content: center !important;
+    gap: var(--spacing-md) !important;
+    margin: var(--spacing-lg) 0 !important;
+}
+
+.contact li a {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 50px !important;
+    height: 50px !important;
+    background: var(--background-tertiary) !important;
+    color: var(--text-secondary) !important;
+    border-radius: 50% !important;
+    text-decoration: none !important;
+    transition: all 0.3s ease !important;
+    font-size: 1.25rem !important;
+}
+
+/* GitHub - keep original black */
+.contact li a.brands.fa-github {
+    color: #333333 !important;
+}
+
+.contact li a.brands.fa-github:hover {
+    background: #333333 !important;
+    color: white !important;
+    transform: translateY(-2px) scale(1.1) !important;
+    box-shadow: var(--shadow-md) !important;
+}
+
+/* LinkedIn - keep original blue */
+.contact li a.brands.fa-linkedin {
+    color: #0077b5 !important;
+}
+
+.contact li a.brands.fa-linkedin:hover {
+    background: #0077b5 !important;
+    color: white !important;
+    transform: translateY(-2px) scale(1.1) !important;
+    box-shadow: var(--shadow-md) !important;
+}
+
+/* Twitter - keep original blue */
+.contact li a.brands.fa-twitter {
+    color: #1da1f2 !important;
+}
+
+.contact li a.brands.fa-twitter:hover {
+    background: #1da1f2 !important;
+    color: white !important;
+    transform: translateY(-2px) scale(1.1) !important;
+    box-shadow: var(--shadow-md) !important;
+}
+
+/* Instagram - gradient colors */
+.contact li a.brands.fa-instagram {
+    color: #e4405f !important;
+}
+
+.contact li a.brands.fa-instagram:hover {
+    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%) !important;
+    color: white !important;
+    transform: translateY(-2px) scale(1.1) !important;
+    box-shadow: var(--shadow-md) !important;
+}
+
+/* Default hover for other icons */
+.contact li a:hover {
+    transform: translateY(-2px) scale(1.1) !important;
+    box-shadow: var(--shadow-md) !important;
+}
+
+/* Link improvements */
+a {
+    color: var(--primary-color) !important;
+    text-decoration: none !important;
+    transition: color 0.2s ease !important;
+}
+
+a:hover {
+    color: var(--primary-hover) !important;
+    text-decoration: underline !important;
+}
+
+/* Paragraph improvements */
+p {
+    color: var(--text-secondary) !important;
+    line-height: var(--line-height-loose) !important;
+    margin-bottom: var(--spacing-sm) !important;
+}
+
+/* Container improvements */
+.container {
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    padding: 0 var(--spacing-md) !important;
+}
+
+/* Grid improvements */
+.row {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: var(--spacing-md) !important;
+    margin: 0 !important;
+}
+
+.row.gtr-200 {
+    gap: var(--spacing-sm) !important;
+}
+
+.col-3 {
+    flex: 0 0 calc(25% - var(--spacing-md) * 3 / 4) !important;
+    max-width: calc(25% - var(--spacing-md) * 3 / 4) !important;
+}
+
+.col-9 {
+    flex: 0 0 calc(75% - var(--spacing-md) / 4) !important;
+    max-width: calc(75% - var(--spacing-md) / 4) !important;
+}
+
+.col-12 {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+}
+
+/* Footer improvements */
+#footer {
+    background: var(--text-primary) !important;
+    color: var(--text-muted) !important;
+    padding: var(--spacing-lg) 0 !important;
+    margin-top: var(--spacing-lg) !important;
+}
+
+#copyright {
+    text-align: center !important;
+    padding-top: var(--spacing-lg) !important;
+    border-top: 1px solid rgba(255,255,255,0.1) !important;
+}
+
+#copyright .menu {
+    display: flex !important;
+    justify-content: center !important;
+    gap: var(--spacing-md) !important;
+    margin: 0 !important;
+}
+
+#copyright .menu li {
+    color: var(--text-muted) !important;
+    font-size: 0.9rem !important;
+}
+
+/* Responsive improvements */
+@media (max-width: 980px) {
+    .col-3 {
+        flex: 0 0 calc(50% - var(--spacing-lg) / 2) !important;
+        max-width: calc(50% - var(--spacing-lg) / 2) !important;
+    }
+    
+    #banner .content h2 {
+        font-size: 2.5rem !important;
+    }
+    
+    #nav {
+        flex-direction: column !important;
+        gap: var(--spacing-sm) !important;
+        text-align: center !important;
+    }
+    
+    #nav ul {
+        flex-direction: row !important;
+        justify-content: center !important;
+        gap: var(--spacing-xs) !important;
+    }
+    
+    .nav-brand {
+        justify-content: center !important;
+    }
+}
+
+@media (max-width: 640px) {
+    .col-3 {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+    }
+    
+    .col-9 {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+    }
+    
+    #banner .content h2 {
+        font-size: 2rem !important;
+    }
+    
+    .box {
+        padding: var(--spacing-lg) !important;
+    }
+    
+    .contact {
+        gap: var(--spacing-sm) !important;
+    }
+    
+    .contact li a {
+        width: 45px !important;
+        height: 45px !important;
+        font-size: 1.1rem !important;
+    }
+    
+    #copyright .menu {
+        flex-direction: column !important;
+        gap: var(--spacing-xs) !important;
+    }
+    
+    #nav ul {
+        flex-direction: column !important;
+        gap: var(--spacing-xs) !important;
+    }
+    
+    .brand-text {
+        font-size: 1rem !important;
+    }
+}
+
+/* Animation improvements */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.box.feature {
+    animation: fadeInUp 0.6s ease-out !important;
+}
+
+.box.feature:nth-child(2) { animation-delay: 0.1s !important; }
+.box.feature:nth-child(3) { animation-delay: 0.2s !important; }
+.box.feature:nth-child(4) { animation-delay: 0.3s !important; }
+.box.feature:nth-child(5) { animation-delay: 0.4s !important; }
+
+/* Focus improvements for accessibility */
+*:focus {
+    outline: 2px solid var(--primary-color) !important;
+    outline-offset: 2px !important;
+}
+
+button:focus,
+.button:focus,
+a:focus {
+    outline: 2px solid var(--primary-color) !important;
+    outline-offset: 2px !important;
+}
+
+/* Additional spacing optimizations */
+section, article {
+    margin-bottom: var(--spacing-lg) !important;
+}
+
+/* Optimize spacing between sections */
+section.box.features {
+    margin-bottom: var(--spacing-md) !important;
+}
+
+/* Reduce excessive margins in grid rows */
+.gtr-200 > * {
+    margin-bottom: 0 !important;
+}
+
+/* Compact the about section specifically */
+.box.highlight header {
+    margin-bottom: var(--spacing-sm) !important;
+}
+
+.box.highlight header br {
+    display: none !important;
+}
+
+.box.highlight header h2 {
+    margin-bottom: var(--spacing-xs) !important;
+    margin-top: var(--spacing-sm) !important;
+}
+
+/* Contact section spacing */
+.contact {
+    margin: var(--spacing-md) 0 !important;
+}
+
+/* Reduce spacing in feature boxes */
+.box.features .row {
+    margin-top: 0 !important;
+}
+
+/* Optimize image margins */
+.image.featured {
+    margin-bottom: var(--spacing-sm) !important;
+}
